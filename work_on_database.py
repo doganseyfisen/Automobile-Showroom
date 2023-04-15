@@ -20,24 +20,24 @@ What do you want to do?
 
 showroom = Showroom()
 while True:
-    userSelect = input("Your request: ")
+    user_select = input("Your request: ")
     print("\n")
 
-    if userSelect == "q" or userSelect == "Q":
+    if user_select == "q" or user_select == "Q":
         print("Goodbye!")
         break
 
-    elif userSelect == "1":
+    elif user_select == "1":
         showroom.show_all_autos()
 
-    elif userSelect == "2":
+    elif user_select == "2":
         brand = input("Which brand do you want to query: ")
         print("Querying now...")
         time.sleep(2)
         showroom.query_autos(brand)
         print("Queried.\n")
 
-    elif userSelect == "3":
+    elif user_select == "3":
         brand = input("Brand: ")
         model = input("Model: ")
         year = int(input("Year: "))
@@ -45,25 +45,25 @@ while True:
         hp = int(input("HP: "))
         transmission = input("Transmission: ")
         cc = int(input("CC: "))
-        newAuto = Automobile(brand, model, year, price, hp, transmission, cc)
+        new_auto = Automobile(brand, model, year, price, hp, transmission, cc)
         print("Adding now...")
         time.sleep(2)
-        showroom.add_auto(newAuto)
+        showroom.add_auto(new_auto)
         print("Added.\n")
 
-    elif userSelect == "4":
+    elif user_select == "4":
         brand = input("Brand: ")
         model = input("Model: ")
         year = int(input("Year: "))
-        answerIs = input("Do you want to continue deleting process? Y/N: ")
+        answer_is = input("Do you want to continue deleting process? Y/N: ")
 
-        if answerIs == "Y" or answerIs == "y":
+        if answer_is == "Y" or answer_is == "y":
             print("Deleting now...")
             time.sleep(2)
             showroom.delete_auto(brand, model, year)
             print("Deleted.\n")
 
-    elif userSelect == "5":
+    elif user_select == "5":
         brand = input("Brand: ")
         model = input("Model: ")
         year = input("Year: ")
@@ -73,7 +73,7 @@ while True:
         time.sleep(2)
         print("Raised.\n")
 
-    elif userSelect == "6":
+    elif user_select == "6":
         brand = input("Brand: ")
         model = input("Model: ")
         year = input("Year: ")
